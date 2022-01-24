@@ -13,23 +13,28 @@
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>LDM Community - Coming Soon!</title>
+    <title>LDM Community - Landing</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./static/favicon/site.webmanifest">
 </head>
 <style>
     body,
     html {
+        background: linear-gradient(35deg, rgba(66, 171, 227, 1) 17%, rgba(115, 0, 255, 1) 100%) fixed;
         height: 100%;
         margin: 0;
+        text-align: center;
     }
 
     .bgimg {
-        background: linear-gradient(35deg, rgba(66, 171, 227, 1) 17%, rgba(115, 0, 255, 1) 100%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100%;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        /* font-family: "Courier New", Courier, monospace; */
-        /* font-size: 25px; */
     }
 
     .card {
@@ -42,23 +47,17 @@
         left: 16px;
     }
 
-    .bottomleft {
-        position: absolute;
-        bottom: 0;
-        left: 16px;
+    .footertext {
+        color: white;
+        margin-top: 30px;
     }
 
     .middle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
 
-    hr {
-        margin: auto;
-        width: 40%;
+        max-width: 70vw;
+        max-height: 70vh;
+        text-align: center;
+        
     }
 
     html {
@@ -70,31 +69,50 @@
         height: 100%;
         overflow: auto;
     }
+
+    .page-title {
+        font-size: 7vh;
+        font-weight: bold;
+        color: white;
+        padding-bottom: 50px;
+    }
+
+    .page-text {
+        font-size: 2.5vh;
+        color: white;
+    }
+
+    .btn {
+        margin: 0px 15px 10px 15px;
+    }
+
+    .btn-success {
+        background-color: rgba(115, 0, 255, 1) !important;
+        border-color: rgba(115, 0, 255, 1) !important;
+    }
+
+    .footertext a:link {
+        color: white;
+        text-decoration: underline;
+    }
 </style>
 
 <body>
 
     <div class="bgimg">
-        <div class="topleft">
-            <img src="https://raw.githubusercontent.com/LDM-Community/LDM-Community.github.io/master/logo.svg" width="50%">
-        </div>
         <div class="middle">
-            <div class="card" style="width: 40rem;">
-                <div class="media">
+            <img src="https://raw.githubusercontent.com/LDM-Community/LDM-Community.github.io/master/logo.svg" width="220vw"><h1 class="page-title">Welcome to LDM Community</h1>
 
-                    <div class="card-body media-body">
-                        <h2 class="card-text"><b>Exciting things are on the way!</b></h2>
-                        <p>We're working hard to put together a new site... but for now, check out our community-written
-                            LDM documentation, or view our projects on GitHub.</p>
-                        <a href="https://ldmcommunity.tk/docs" class="btn btn-primary">Go to Documentation</a>
-                        <a href="https://github.com/LDM-Community/" class="btn btn-success"><i class="fa fa-github mt-0"></i> Visit our GitHub</a>
-                    </div>
-                </div>
+            <p class="page-text">LDM Community is a collborative effort to establish documentation and a support network for users of Legally Distinct Missile (formerly RocketMod). Please consider joining our Discord to get help setting up your server, and view our plugin repository and usage documentation from the links below.</p>
+                <!-- <a href="https://ldm-community.github.io/pluginlist" class="btn btn-success btn-lg">Plugin Repository</a> -->
+                <a href="https://ldm-community.github.io/docs" class="btn btn-success btn-lg">Community Documentation</a>
+                <a href="https://github.com/LDM-Community/" class="btn btn-success btn-lg"><i class="fa fa-github mt-0"></i> Visit our GitHub</a>
+            <div class="footertext">
+                LDM Community is not officially affiliated to <a href="https://smartlydressedgames.com/">SDG</a> or Unturned.
+                For support or inquires, please contact us <a href="https://discord.com/invite/VkeY6synp8">through our Discord</a>.
             </div>
         </div>
-        <div class="bottomleft">
-            <!-- <p>Some text</p> -->
-        </div>
+        
     </div>
 
 </body>
