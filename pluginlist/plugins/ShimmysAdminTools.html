@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./static/css/style.css">
+
+    <!-- Page Title -->
+    <title>ShimmysAdminTools | LDM Community</title>
+
+    <!-- Highlight.js Syntax Highlighting -->
+    <link rel="stylesheet" href="./static/css/atom-one-dark.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    </body>
+
+    <script>
+        function updateSearch() {
+            var input, filter, parent, plugins, pluginTitle, i, txtValue, txtValue2;
+            input = document.getElementById("searchID");
+            filter = input.value.toUpperCase();
+            parent = document.getElementById("parentID");
+            plugins = parent.getElementsByClassName("plugin-col")
+            for (i = 0; i < plugins.length; i++) {
+                pluginTitle = plugins[i].getElementsByClassName("card-title")[0];
+                pluginDesc = plugins[i].getElementsByClassName("card-text")[0];
+                if (pluginTitle) {
+                    txtValue = pluginTitle.textContent || pluginTitle.innerText;
+                    txtValue2 = pluginDesc.textContent || pluginDesc.innerText;
+                    let parent2 = pluginTitle.closest(".plugin-col");
+                    if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+                        parent2.style.visibility = "visible";
+                        parent2.style.position = "";
+                    } else {
+                        parent2.style.visibility = "hidden";
+                        parent2.style.position = "absolute";
+                    }
+                }
+            }
+        }
+
+        //Get the button
+        // var backToTopButton = document.getElementById("backToTopButton");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("backToTopButton").style.opacity = "1";
+                document.getElementById("backToTopButton").style.pointerEvents = "auto";
+            } else {
+                document.getElementById("backToTopButton").style.opacity = "0";
+                document.getElementById("backToTopButton").style.pointerEvents = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</head>
+
+<body id="page-container">
+    <div id="content-wrap">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fancy">
+            <a class="navbar-brand" href="#">LDM Community</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Docs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Plugin List</a>
+                    </li>
+                    <!-- <li class="nav-item">
+							<a class="nav-link" href="#">Pricing</a>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+							</li> -->
+                </ul>
+            </div>
+        </nav>
+        <!-- <div class="container-fluid ldm-titlebar">
+				<h4 class="title"><b>Need help?</b> - Join our Discord server!</h4>
+			</div> -->
+
+        <div class="container page-content">
+            <div class="d-flex flex-row align-items-center">
+                <img src="./static/img/logo.svg" height="100px;">
+                <div class="p-2 plugin-header">
+                    <h1 class="mt-0">ShimmysAdminTools</h1>
+                    <a href="https://github.com/ShimmyMySherbet/"><i class="fa fa-github mt-0"></i> ShimmyMySherbet</a>
+                </div>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="row plugin-page">
+                <div class="col-9 plugin-page-content">
+                    <!-- EXAMPLE PAGE CONTENT
+						
+						<h1>Description</h1>
+						<p>uEssentials is a plugin that exists, and in fact, does stuff!</p>
+
+						<div class="video-container"><iframe class="video" src="https://www.youtube.com/embed/G5WcrqecEbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> -->
+
+                    <a id="ShimmysAdminTools"></a>
+                    <h1>ShimmysAdminTools</h1>
+                    <p>An admin toolkit for Unturned including flight and Noclip.</p>
+
+                    <a id="Demo Video"></a>
+                    <h1>Demo Video</h1>
+                    <p>Heres a very out-dated demo video. I'll get around to making a proper one eventually.</p>
+                    <div class="video-container"><iframe class="video" src="https://youtube.com/embed/2yo6BurDUA4" title="Youtube Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+
+
+
+
+                    <a id="Commands"></a>
+                    <h1>Commands</h1>
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>AFly</td>
+                            <td>Toggles flight</td>
+                        </tr>
+                        <tr>
+                            <td>AFlySpeed [Speed]</td>
+                            <td>Changes/resets fly speed</td>
+                        </tr>
+                        <tr>
+                            <td>AFlyVSpeed [Speed]</td>
+                            <td>Changes/resets vertical fly speed</td>
+                        </tr>
+                        <tr>
+                            <td>Noclip</td>
+                            <td>Toggles Noclip</td>
+                        </tr>
+                        <tr>
+                            <td>CheckBedOwner</td>
+                            <td>Checks who has claimed the bed your looking at</td>
+                        </tr>
+                        <tr>
+                            <td>DisableVehicleAccess [Player]</td>
+                            <td>Disables/Enables a player's ability to enter and use vehicles</td>
+                        </tr>
+                        <tr>
+                            <td>ForceDismount [Player]</td>
+                            <td>Forcibly removes a player from their vehicle</td>
+                        </tr>
+                        <tr>
+                            <td>GotoBed [Name/ID]</td>
+                            <td>Teleports you to another player's bed</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td>Marker [Marker Name]</td>
+                            <td>Places a marker at your position</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td>GotoMarker [Marker Name]</td>
+                            <td>Teleports you to a previously set marker</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td>PointTool [Tool]</td>
+                            <td>Toggles/Changes your active PointTool (See Below)</td>
+                        </tr>
+                        <tr>
+                            <td>MapJump</td>
+                            <td>Toggles Map/Marker jumping (teleport on new marker).</td>
+                        </tr>
+                        <tr>
+                            <td>Mute [Player]</td>
+                            <td>Mutes a player from speaking in chat.</td>
+                        </tr>
+                        <tr>
+                            <td>Mute [Player] [Duration]</td>
+                            <td>Temp Mutes a player from speaking in chat.</td>
+                        </tr>
+                        <tr>
+                            <td>Unmute [Player]</td>
+                            <td>Unmutes a player.</td>
+                        </tr>
+                        <tr>
+                            <td>CommandSpy</td>
+                            <td>Toggles global command spying.</td>
+                        </tr>
+                        <tr>
+                            <td>CommandSpy [Players]</td>
+                            <td>Toggles command spying on a player.</td>
+                        </tr>
+                        <tr>
+                            <td>SetFireMode [Mode]</td>
+                            <td>Force changes the fire mode of your gun (e.g., full auto grizzly).</td>
+                        </tr>
+                        <tr>
+                            <td>UnlockFireModes</td>
+                            <td>Allows you to cycle through all fire modes using your change fire hotkey.</td>
+                        </tr>
+                        <tr>
+                            <td>Attachment [Attachment Name/ID]</td>
+                            <td>Forcibly adds an attachment to your weapon.</td>
+                        </tr>
+                        <tr>
+                            <td>Attachment [Magazine Name/ID]</td>
+                            <td>Forcibly gives your weapon any Magazine/Ammo Clip.</td>
+                        </tr>
+                        <tr>
+                            <td>UnlimitedAmmo</td>
+                            <td>Enables/Disables unlimited ammo.</td>
+                        </tr>
+                        <tr>
+                            <td>UnlimitedAmmo [Max Ammo override]</td>
+                            <td>Enables Unlimited Ammo, overriding your gun's max ammo.</td>
+                        </tr>
+                        <tr>
+                            <td>Exec [Player] [Command/Message]</td>
+                            <td>Similar to /sudo, however the target player does not need permission to run the command.</td>
+                        </tr>
+                        <tr>
+                            <td>ExecAll [Command/Message]</td>
+                            <td>Same as /Exec, but targets all players.</td>
+                        </tr>
+                        <tr>
+                            <td>WipePlayerBuildings [Player/PlayerID]</td>
+                            <td>Wipes all structures/barricades placed by the target player.</td>
+                        </tr>
+                        <tr>
+                            <td>WipePlayerBuildings [Player/PlayerID] [Structure/Barricade ID]</td>
+                            <td>Wipes all instances of the target structures/barricades placed by the target player.</td>
+                        </tr>
+                    </table>
+
+                    <a id="PointTools"></a>
+                    <h2>PointTools</h2>
+                    <p>PointTools is a small toolkit includes tools that are triggered by punching/gestures. These tools will target where/what you are activly looking at.</p>
+
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Tool</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Destroy</td>
+                            <td>Destroys what your currently looking at. Works on barricades, Structurs, and Vehicles.</td>
+                        </tr>
+                        <tr>
+                            <td>Kill</td>
+                            <td>Kills the Player/Animal/Zombie you are looking at. Turns Players to gold.</td>
+                        </tr>
+                        <tr>
+                            <td>Jump</td>
+                            <td>Teleports you to where your looking.<br>
+                                <ul>
+                                    <li>Left Punch - Finds the highest point near where you punched. e.g. punch at a flag pole, get TPed ontop of it.</li>
+                                    <li>Right Punch - Teleports you just inside of what your looking at, to allow you to clip through walls.</v>
+                                    <li>Point - Teleports you directly where your looking, but not inside of the object.</li>
+                                </ul>
+                                You can also punch up into the sky to teleport to the skybox, then punch down anywhere on the map. Allowing you to teleport anywhere, quickly, and with high accuracy.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Utility</td>
+                            <td>A kit of smaller tools<br>
+                                <ul>
+                                    <li>Explodes charges</li>
+                                    <li>Opens/Closes doors (Even if you don't own them)</li>
+                                    <li>Checks the owner of a bed (Same as /CheckBedOwner)</li>
+                                    <li>Opens storage (from any distance, even if you don't own them)</li>
+                                </ul>
+                                Tools are still to be added.
+                        </tr>
+                    </table>
+
+                    <p>There are still more 'PointTools' to be added. This is not the final version.</p>
+
+                    <a id="Permissions"></a>
+                    <h1>Permissions</h1>
+
+
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <td>Permission</td>
+                            <td>Description</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.Flight</td>
+                            <td>Provides access to all the flight commands, incl. /Afly, /AflySpeed, and /AflyVSpeed</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.Flight.MaxSpeed.X</td>
+                            <td>Sets the max fly speed, where X is the speed. Default is 1 (Walk/Run speed)</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.Flight.MaxSpeed.Bypass</td>
+                            <td>Disables fly speed restriction (global limit still applies)</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.Flight.MaxVSpeed.X</td>
+                            <td>Sets the max vertical fly speedd. Default is 1</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.Flight.MaxVSpeed.Bypass</td>
+                            <td>Disables vertical fly speed restriction (global limit still applies)</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.PointTool</td>
+                            <td>Provides access to /PointTool</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.PointTool.all</td>
+                            <td>Grants all PointTool perms</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.PointTool.Destroy</td>
+                            <td>Provides access to the Destroy tool</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.PointTool.Jump</td>
+                            <td>Provides access to the Jump tool</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.PointTool.Utility</td>
+                            <td>Provides access to the Utility tool</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.PointTool.Kill</td>
+                            <td>Provides access to the Kill tool</td>
+                        </tr>
+                        <tr>
+                            <td>ShimmysAdminTools.PointTool.DestroyOtherPlayersStuff</td>
+                            <td>Grants permission to destroy other player's vehicles/buildables with the Destoy Tool</td>
+                        </tr>
+                    </table>
+                    <p>The rest of the perms are to be granted via their respective command.</p>
+
+                    <a id="Screenshots"></a>
+                    <h2>Screenshots</h2>
+
+                    <a id="Command Spy"></a>
+                    <h3>Command Spy</h3>
+                    <p>Command spy displays the commands of other players and admins. It's a useful tool to keep an eye on commands without needing console.
+                        An example of command spy in action:</p>
+
+                    <img src="https://cdn.discordapp.com/attachments/658867220314587162/735449754862878770/unknown.png" width="500px">
+
+                    <a id="Downloads"></a>
+                    <h1>Downloads</h1>
+                    <p>You can download this plugin from the <a href="https://github.com/ShimmyMySherbet/ShimmysAdminTools/releases/">Releases</a> page.</p>
+                </div>
+                <div class="col-3 plugin-page-sidebar">
+                    <!-- <button type="button" class="btn btn-success btn-sidebar"><i class="fa fa-github mt-0"></i> Latest Release</button>
+						<button type="button" class="btn btn-primary btn-sidebar"><i class="fa fa-github mt-0"></i> View on GitHub</button> -->
+                    <a class="btn btn-success btn-sidebar" href="https://github.com/ShimmyMySherbet/ShimmysAdminTools/releases/latest" role="button"><i class="fa fa-github mt-0"></i> Latest Release</a>
+                    <a class="btn btn-primary btn-sidebar" href="https://github.com/ShimmyMySherbet/ShimmysAdminTools" role="button"><i class="fa fa-github mt-0"></i> View on GitHub</a>
+                    <div class="sidebar-list sticky-top">
+
+                        <h3>Contents</h3>
+                        <!-- <a href="#"><p>List item 1</p></a>
+							<a href="#"><p>List item 2</p></a>
+							<a href="#" class="indent"><p>Sub-item 1</p></a>
+							<a href="#"><p>List item 3</p></a> -->
+                        <a href="#ShimmysAdminTools">
+                            <p>ShimmysAdminTools</p>
+                        </a><a href="#Demo Video">
+                            <p>Demo Video</p>
+                        </a><a href="#Commands">
+                            <p>Commands</p>
+                        </a><a href="#Permissions">
+                            <p>Permissions</p>
+                        </a><a href="#Downloads">
+                            <p>Downloads</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <span class="text-muted">LDM Community is not affiliated to <a href="https://smartlydressedgames.com/">SDG</a> or Unturned.</span><br>
+                <span class="text-muted">For support or inquires, please contact us <a href="https://discord.com/invite/VkeY6synp8">through our Discord</a>.</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Back to Top button -->
+    <button onclick="topFunction()" id="backToTopButton" class="btn btn-primary" title="Back to Top">Back to Top</button>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
