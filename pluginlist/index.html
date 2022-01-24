@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="./plugins/static/css/style.css">
     <title>Plugins | LDM Community</title>
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ldm-community.github.io/static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ldm-community.github.io/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://ldm-community.github.io/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://ldm-community.github.io/static/favicon/site.webmanifest">
+
     <script>
         function updateSearch() {
             var input, filter, parent, plugins, pluginTitle, i, txtValue, txtValue2;
@@ -45,20 +51,23 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">LDM Community</a>
+        <a class="navbar-brand" href="https://ldm-community.github.io/">LDM Community</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="https://ldm-community.github.io/pluginlist/">Plugins</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Docs</a>
+                    <a class="nav-link" href="https://ldm-community.github.io/docs/">Docs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Plugin List</a>
+                    <a class="nav-link" href="https://github.com/LDM-Community/">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://discord.com/invite/VkeY6synp8">Discord</a>
                 </li>
                 <!-- <li class="nav-item">
 						<a class="nav-link" href="#">Pricing</a>
@@ -82,13 +91,18 @@
                         <p class="card-text">The LDM Community Discord is a great place to ask questions, find plugins,
                             share ideas and socialise with others!
                         </p>
-                        <a href="#" class="card-link">Join Now</a>
+                        <a href="https://discord.com/invite/VkeY6synp8" class="card-link">Join Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row ldm-plugins" id="parentID">
+        <div style="width: 100%; text-align: center;">
+            <h1 style="font-size: 7vh; font-weight: bold;">Plugin Repository</h1>
+            <h4 style="padding-bottom: 50px;">A curated list of free and open-source plugins for your server!</h4>
+        </div>
+
         <div class="input-group mb-3 plugin-search">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon3">Search for plugins:</span>
@@ -99,22 +113,142 @@
         <div class="col-sm-4 plugin-col">
             <div class="card">
                 <div class="media" style="height: 170px;">
-                    <img src="https://static.wikia.nocookie.net/unturned-bunker/images/a/aa/Blowtorch_76.png/revision/latest?cb=20160617225632" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
 
                     <div class="card-body media-body">
-                        <h5 class="card-title">Example Plugin!</h5>
+                        <h5 class="card-title">AntiCombatLog</h5>
                         <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
-                        <span class="badge badge-primary">Open Source</span>
-                        <p class="card-text">An example plugin! No one really knows why it's here... or who made it... or what it even does!
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">A Rocket plug-in that punishes players who combat log.
                         </p>
                     </div>
                 </div>
                 <div class="card-footer text-muted">
                     <p>
-                        <a href="undefined"><i class="fa fa-github"></i> MrTestPluginCreator</a>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
                     </p>
                     <div class="text-right">
-                        <a href="https://github.com/XanderCodes/LDM-SSG" class="btn btn-primary">Source Code</a>
+                        <a href="https://github.com/RocketModPlugins/AntiCombatLog" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/AntiCombatLog.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">BonusXP</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Unturned RocketMod Plugin for extra XP
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/BonusXP" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/BonusXP.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">ChatBot</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">XMPP / Discord chatbot for Rocket.Unturned
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/ChatBot" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/ChatBot.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">CommandLogger</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Log all abusive commands to see what your admins are up to
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/CommandLogger" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/CommandLogger.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">EasyAmmo</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">EasyAmmo plugin for rocketmod unturned servers
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/EasyAmmo" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/EasyAmmo.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="https://i.kym-cdn.com/entries/icons/original/000/016/248/unturned_zambie.png" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">Example Plugin</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-info">Whatever</span>
+                        <p class="card-text">This is an example plugin that developers can look at to help them intergrate their plugins into this list!
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="undefined"><i class="fa fa-github"></i> AppleManYT</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://gist.github.com/XanderCodes/cbaaf198ff6356cbe8f522e214557544" class="btn btn-primary">Source Code</a>
                         <a href="https://ldm-community.github.io/pluginlist/plugins/Example Plugin.html" class="btn btn-success">View</a>
                     </div>
                 </div>
@@ -126,20 +260,20 @@
                     <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
 
                     <div class="card-body media-body">
-                        <h5 class="card-title">Markdown Examples Test</h5>
+                        <h5 class="card-title">GlobalBan</h5>
                         <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
-                        <span class="badge badge-primary">Open Source</span>
-                        <p class="card-text"><i>No description provided</i>
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Unturned 3 Rocket Mod Plugin: Ban users in a MySQL Database
                         </p>
                     </div>
                 </div>
                 <div class="card-footer text-muted">
                     <p>
-                        <a href="undefined"><i class="fa fa-github"></i> MrTestPluginCreator</a>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
                     </p>
                     <div class="text-right">
-                        <a href="https://google.com" class="btn btn-primary">Source Code</a>
-                        <a href="https://ldm-community.github.io/pluginlist/plugins/Markdown Examples.html" class="btn btn-success">View</a>
+                        <a href="https://github.com/RocketModPlugins/GlobalBan" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/GlobalBan.html" class="btn btn-success">View</a>
                     </div>
                 </div>
             </div>
@@ -150,26 +284,614 @@
                     <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
 
                     <div class="card-body media-body">
-                        <h5 class="card-title">ShimmysAdminTools</h5>
+                        <h5 class="card-title">ItemVault</h5>
                         <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
-                        <span class="badge badge-primary">Open Source</span>
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
                         <p class="card-text"><i>No description provided</i>
                         </p>
                     </div>
                 </div>
                 <div class="card-footer text-muted">
                     <p>
-                        <a href="https://github.com/ShimmyMySherbet/"><i class="fa fa-github"></i> ShimmyMySherbet</a>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
                     </p>
                     <div class="text-right">
-                        <a href="https://github.com/ShimmyMySherbet/ShimmysAdminTools" class="btn btn-primary">Source Code</a>
-                        <a href="https://ldm-community.github.io/pluginlist/plugins/ShimmysAdminTools.html" class="btn btn-success">View</a>
+                        <a href="https://github.com/RocketModPlugins/ItemVault" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/ItemVault.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">Kits</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Unturned 3 Rocket Mod Plugin: Give yourself a kit
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/Kits" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/Kits.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">MessageAnnouncer</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Unturned 3 Rocket Mod Plugin: Automatic Message in a predefined interval
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/MessageAnnouncer" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/MessageAnnouncer.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">Observatory</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Placeholder repository for Bugtracking & Wiki
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/Observatory" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/Observatory.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">OwnerChecker</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Check the owner of any structure. : RM5 Ready
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/OwnerChecker" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/OwnerChecker.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">PVEManager</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Allows Players to individually Be in PVE Mode
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/PVEManager" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/PVEManager.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">RPEvents</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Show Events in RP Situations
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/RPEvents" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/RPEvents.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">ReservedSlots</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Readds the reserved slots feature, with some extra functionality.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/ReservedSlots" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/ReservedSlots.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">Rocket-Jobs</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Plugin for unturned
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/Rocket-Jobs" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/Rocket-Jobs.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">Rocket.Rcon</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Rocket Rcon Plugin
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/Rocket.Rcon" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/Rocket.Rcon.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">SimpleDeathMessages</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Show death messages in the server's chat!
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/SimpleDeathMessages" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/SimpleDeathMessages.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">StaffHelp</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">A Private chat with a Player and Admins
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/StaffHelp" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/StaffHelp.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">StatKeeper</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Track player stats in Unturned 3.0.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/StatKeeper" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/StatKeeper.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">TPA</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Just like TPA in Minecraft, this allows players to request a teleport to other players and the other player can accept or deny their request.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/TPA" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/TPA.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">Uconomy</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Unturned 3 Rocket Mod Plugin: Economy Plugin, Your own ingame currency & Shops
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/Uconomy" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/Uconomy.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">Votifier</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Unturned 3 Rocket Mod Plugin: Vote on server lists to get a reward
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/Votifier" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/Votifier.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">VotifierRewardUconomy</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Rocket plugin to reward players with money when they vote
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/VotifierRewardUconomy" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/VotifierRewardUconomy.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">WebsiteCommand</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text"><i>No description provided</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/WebsiteCommand" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/WebsiteCommand.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">WreckingBall2</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Wrecking ball Ported to RM 5
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/WreckingBall2" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/WreckingBall2.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">ZaupFeast</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Feast Rocket Plugin for Unturned 3.0
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/ZaupFeast" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/ZaupFeast.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">ZaupHomeCommand</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Home Command Rocket Plugin for Unturned 3.0
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/ZaupHomeCommand" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/ZaupHomeCommand.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">ZaupShop</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Uconomy Shop Rocket Plugin for Unturned 3.0
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/ZaupShop" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/ZaupShop.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">ZaupUconomyEssentials</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text">Uconomy Essentials Rocket Plugin for Unturned 3.0
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/ZaupUconomyEssentials" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/ZaupUconomyEssentials.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">ZaupWhitelist</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-danger">Deprecated</span>
+                        <p class="card-text"><i>No description provided</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/RocketModPlugins"><i class="fa fa-github"></i> RocketModPlugins</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/RocketModPlugins/ZaupWhitelist" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/ZaupWhitelist.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="https://static.wikia.nocookie.net/unturned-bunker/images/a/aa/Blowtorch_76.png" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">uEssentials</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span><span class="badge badge-info">Community Fork</span>
+                        <p class="card-text">uEssentials is a plugin that adds new commands and features to Unturned Servers. This fork is maintained by TH3AL3X.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="undefined"><i class="fa fa-github"></i> leonardosnt (fork by: TH3AL3X)</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/TH3AL3X/uEssentials" class="btn btn-primary">Source Code</a>
+                        <a href="https://ldm-community.github.io/pluginlist/plugins/uEssentials.html" class="btn btn-success">View</a>
                     </div>
                 </div>
             </div>
         </div>
 
+
     </div>
+    <div style="text-align: center; width: 100%; margin-bottom: 15px;">
+        <h5><a href="">Return to Top</a></h5>
+    </div>
+
+
+    <footer id="footer" style="position: initial !important;">
+        <div class="container">
+            <span class="text-muted">LDM Community is not affiliated to <a href="https://smartlydressedgames.com/">SDG</a> or Unturned.</span><br>
+            <span class="text-muted">For support or inquires, please contact us <a href="https://discord.com/invite/VkeY6synp8">through our Discord</a>.</span>
+        </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
