@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./plugins/static/css/style.css">
+    <title>Plugins | LDM Community</title>
+
+    <script>
+        function updateSearch() {
+            var input, filter, parent, plugins, pluginTitle, i, txtValue, txtValue2;
+            input = document.getElementById("searchID");
+            filter = input.value.toUpperCase();
+            parent = document.getElementById("parentID");
+            plugins = parent.getElementsByClassName("plugin-col")
+            for (i = 0; i < plugins.length; i++) {
+                pluginTitle = plugins[i].getElementsByClassName("card-title")[0];
+                pluginDesc = plugins[i].getElementsByClassName("card-text")[0];
+                if (pluginTitle) {
+                    txtValue = pluginTitle.textContent || pluginTitle.innerText;
+                    txtValue2 = pluginDesc.textContent || pluginDesc.innerText;
+                    let parent2 = pluginTitle.closest(".plugin-col");
+                    if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+                        parent2.style.visibility = "visible";
+                        parent2.style.position = "";
+                    } else {
+                        parent2.style.visibility = "hidden";
+                        parent2.style.position = "absolute";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">LDM Community</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Docs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Plugin List</a>
+                </li>
+                <!-- <li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+						</li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid ldm-gradient">
+        <div class="media">
+            <img src="plugins/static/img/logo.svg" class="media-left ldm-logo-gradient">
+            <h1 class="media-body title">Resources for the community,<br>curated by the community.
+            </h1>
+            <div class="card discord-card">
+                <div class="media">
+                    <img src="plugins/static/img/discord-logo.png" width="20%" class="media-left media-middle plugin-icon">
+                    <div class="card-body media-body">
+                        <h5 class="card-title">LDM Community Discord</h5>
+                        <p class="card-text">The LDM Community Discord is a great place to ask questions, find plugins,
+                            share ideas and socialise with others!
+                        </p>
+                        <a href="#" class="card-link">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row ldm-plugins" id="parentID">
+        <div class="input-group mb-3 plugin-search">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">Search for plugins:</span>
+            </div>
+            <input type="text" class="form-control" id="searchID" onkeyup="updateSearch()" aria-describedby="basic-addon3">
+        </div>
+
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="https://static.wikia.nocookie.net/unturned-bunker/images/a/aa/Blowtorch_76.png/revision/latest?cb=20160617225632" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">Example Plugin!</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span>
+                        <p class="card-text">An example plugin! No one really knows why it's here... or who made it... or what it even does!
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="undefined"><i class="fa fa-github"></i> MrTestPluginCreator</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/XanderCodes/LDM-SSG" class="btn btn-primary">Source Code</a>
+                        <a href="file:///C:/Users/xande/Documents/GitHub/LDM-SSG/reader/output/plugins/Example Plugin.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">Markdown Examples Test</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span>
+                        <p class="card-text"><i>No description provided</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="undefined"><i class="fa fa-github"></i> MrTestPluginCreator</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://google.com" class="btn btn-primary">Source Code</a>
+                        <a href="file:///C:/Users/xande/Documents/GitHub/LDM-SSG/reader/output/plugins/Markdown Examples.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 plugin-col">
+            <div class="card">
+                <div class="media" style="height: 170px;">
+                    <img src="./plugins/static/img/logo.svg" style="width: 30%; max-height: 100%; object-fit: contain;" class="media-left media-middle plugin-icon">
+
+                    <div class="card-body media-body">
+                        <h5 class="card-title">ShimmysAdminTools</h5>
+                        <!-- <span class="badge badge-danger">Deprecated</span><span class="badge badge-primary">Open Source</span> -->
+                        <span class="badge badge-primary">Open Source</span>
+                        <p class="card-text"><i>No description provided</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>
+                        <a href="https://github.com/ShimmyMySherbet/"><i class="fa fa-github"></i> ShimmyMySherbet</a>
+                    </p>
+                    <div class="text-right">
+                        <a href="https://github.com/ShimmyMySherbet/ShimmysAdminTools" class="btn btn-primary">Source Code</a>
+                        <a href="file:///C:/Users/xande/Documents/GitHub/LDM-SSG/reader/output/plugins/ShimmysAdminTools.html" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
