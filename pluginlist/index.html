@@ -22,6 +22,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="https://ldm-community.github.io/static/favicon/favicon-16x16.png">
     <link rel="manifest" href="https://ldm-community.github.io/static/favicon/site.webmanifest">
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
     <script>
         function updateSearch() {
             var input, filter, parent, plugins, pluginTitle, i, txtValue, txtValue2;
@@ -46,6 +49,52 @@
                 }
             }
         }
+
+        function hidePlugins() {
+
+            let filter = {
+                box1: document.getElementById("tag1box").checked,
+                box2: document.getElementById("tag2box").checked,
+                box3: document.getElementById("tag3box").checked,
+                box4: document.getElementById("tag4box").checked
+            }
+
+            var plugins = $(".plugin-col");
+
+            plugins.css("display", "");
+            let output = plugins.filter(element => {
+                let tags = plugins[element].getElementsByClassName("card")[0].getElementsByClassName("media")[0].getElementsByClassName("card-body")[0].getElementsByClassName("badge");
+                for (var i = 0; i < tags.length; i++) {
+                    if (tags[i].innerText == "Open Source" && filter.box1 || tags[i].innerText == "Deprecated" && filter.box2 || tags[i].innerText == "Community Fork" && filter.box3 || tags[i].innerText == "3rd Party Store" && filter.box4)
+                        return true;
+                }
+                return false;
+            }).css("display", "none");
+        }
+
+        $(document).ready(function() {
+            $('#sort-down').click(function() {
+                $('.plugin-col').sort(function(a, b) {
+                    $('#sort-button').html('Sort By: Name (A-Z) <i class="fa fa-arrow-down" aria-hidden="true"></i>');
+                    if (a.textContent < b.textContent) {
+                        return -1;
+                    } else {
+                        return 1;
+                    }
+                }).appendTo('#parentID');
+            });
+
+            $('#sort-up').click(function() {
+                $('.plugin-col').sort(function(a, b) {
+                    $('#sort-button').html('Sort By: Name (Z-A) <i class="fa fa-arrow-up" aria-hidden="true"></i>');
+                    if (a.textContent > b.textContent) {
+                        return -1;
+                    } else {
+                        return 1;
+                    }
+                }).appendTo('#parentID');
+            });
+        });
     </script>
 </head>
 
@@ -108,6 +157,43 @@
                 <span class="input-group-text" id="basic-addon3">Search for plugins:</span>
             </div>
             <input type="text" class="form-control" id="searchID" onkeyup="updateSearch()" aria-describedby="basic-addon3">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="sort-button">Sort By: Name (A-Z) <i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" id="sort-down">Name (A-Z) <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                    <a class="dropdown-item" id="sort-up">Name (Z-A) <i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group input-group-sm mb-3 plugin-search">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Exclude Tags: </span>
+            </div>
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input id="tag1box" type="checkbox" class="badge-checkbox" onclick="hidePlugins();">
+                    <span class="badge badge-primary">Open Source</span>
+                </div>
+            </div>
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input id="tag2box" type="checkbox" class="badge-checkbox" onclick="hidePlugins();">
+                    <span class="badge badge-danger">Deprecated</span>
+                </div>
+            </div>
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input id="tag3box" type="checkbox" class="badge-checkbox" onclick="hidePlugins();">
+                    <span class="badge badge-info">Community Fork</span>
+                </div>
+            </div>
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <input id="tag4box" type="checkbox" class="badge-checkbox" onclick="hidePlugins();">
+                    <span class="badge badge-warning">3rd Party Store</span>
+                </div>
+            </div>
         </div>
 
         <div class="col-sm-4 plugin-col">

@@ -200,3 +200,7 @@ body {
       display: none;
     }
   }
+
+.input-group-text span {
+    margin-left: 8px;
+}
