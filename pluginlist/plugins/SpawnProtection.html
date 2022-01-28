@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./static/css/style.css">
+
+    <!-- Page Title -->
+    <title>SpawnProtection | LDM Community</title>
+
+    <!-- Highlight.js Syntax Highlighting -->
+    <link rel="stylesheet" href="./static/css/atom-one-dark.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    </body>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ldm-community.github.io/static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ldm-community.github.io/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://ldm-community.github.io/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://ldm-community.github.io/static/favicon/site.webmanifest">
+
+    <script>
+        function updateSearch() {
+            var input, filter, parent, plugins, pluginTitle, i, txtValue, txtValue2;
+            input = document.getElementById("searchID");
+            filter = input.value.toUpperCase();
+            parent = document.getElementById("parentID");
+            plugins = parent.getElementsByClassName("plugin-col")
+            for (i = 0; i < plugins.length; i++) {
+                pluginTitle = plugins[i].getElementsByClassName("card-title")[0];
+                pluginDesc = plugins[i].getElementsByClassName("card-text")[0];
+                if (pluginTitle) {
+                    txtValue = pluginTitle.textContent || pluginTitle.innerText;
+                    txtValue2 = pluginDesc.textContent || pluginDesc.innerText;
+                    let parent2 = pluginTitle.closest(".plugin-col");
+                    if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+                        parent2.style.visibility = "visible";
+                        parent2.style.position = "";
+                    } else {
+                        parent2.style.visibility = "hidden";
+                        parent2.style.position = "absolute";
+                    }
+                }
+            }
+        }
+
+        //Get the button
+        // var backToTopButton = document.getElementById("backToTopButton");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("backToTopButton").style.opacity = "1";
+                document.getElementById("backToTopButton").style.pointerEvents = "auto";
+            } else {
+                document.getElementById("backToTopButton").style.opacity = "0";
+                document.getElementById("backToTopButton").style.pointerEvents = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</head>
+
+<body id="page-container">
+    <div id="content-wrap">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fancy">
+            <a class="navbar-brand" href="https://ldm-community.github.io/">LDM Community</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://ldm-community.github.io/pluginlist/">Plugins</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ldm-community.github.io/docs/">Docs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/LDM-Community/">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.com/invite/VkeY6synp8">Discord</a>
+                    </li>
+                    <!-- <li class="nav-item">
+							<a class="nav-link" href="#">Pricing</a>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+							</li> -->
+                </ul>
+            </div>
+        </nav>
+        <!-- <div class="container-fluid ldm-titlebar">
+				<h4 class="title"><b>Need help?</b> - Join our Discord server!</h4>
+			</div> -->
+
+        <div class="container page-content">
+            <div class="d-flex flex-row align-items-center">
+                <img src="./static/img/logo.svg" height="100px;">
+                <div class="p-2 plugin-header">
+                    <h1 class="mt-0">SpawnProtection</h1>
+                    <a href="https://github.com/RocketModPlugins"><i class="fa-brands fa-github"></i></i> RocketModPlugins</a>
+                </div>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="row plugin-page">
+                <div class="col-9 plugin-page-content">
+                    <!-- EXAMPLE PAGE CONTENT
+						
+						<h1>Description</h1>
+						<p>uEssentials is a plugin that exists, and in fact, does stuff!</p>
+
+						<div class="video-container"><iframe class="video" src="https://www.youtube.com/embed/G5WcrqecEbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> -->
+
+                    null<div class="alert alert-danger" role="alert" style="margin-top: 16px;">
+                        <h4 class="alert-heading"><i class="fas fa-exclamation-circle" style="font-size: 1.3rem;"></i> Note</h4>This plugin has been deprecated. We only list this plugin in our repository for archival purposes - there is no guarrentee there will be a release available, or that the plugin will actually work!
+                    </div>
+                </div>
+                <div class="col-3 plugin-page-sidebar">
+                    <!-- <button type="button" class="btn btn-success btn-sidebar"><i class="fa fa-github mt-0"></i> Latest Release</button>
+						<button type="button" class="btn btn-primary btn-sidebar"><i class="fa fa-github mt-0"></i> View on GitHub</button> -->
+                    <a class="btn btn-success btn-sidebar" href="https://github.com/RocketModPlugins/SpawnProtection/releases/latest" role="button"><i class="fa-brands fa-github"></i></i> Latest Release</a>
+                    <a class="btn btn-primary btn-sidebar" href="https://github.com/RocketModPlugins/SpawnProtection" role="button"><i class="fa-brands fa-github"></i></i> View on GitHub</a>
+                    <div class="sidebar-list sticky-top">
+
+                        <h3>Contents</h3>
+                        <!-- <a href="#"><p>List item 1</p></a>
+							<a href="#"><p>List item 2</p></a>
+							<a href="#" class="indent"><p>Sub-item 1</p></a>
+							<a href="#"><p>List item 3</p></a> -->
+                        <a href="SpawnProtection.html">
+                            <p>Top</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <span class="text-muted">LDM Community is not affiliated to <a href="https://smartlydressedgames.com/">SDG</a> or Unturned.</span><br>
+                <span class="text-muted">For support or inquires, please contact us <a href="https://discord.com/invite/VkeY6synp8">through our Discord</a>.</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Back to Top button -->
+    <button onclick="topFunction()" id="backToTopButton" class="btn btn-primary" title="Back to Top">Back to Top</button>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
