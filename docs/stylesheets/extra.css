@@ -1,5 +1,13 @@
 :root {
-  --md-primary-fg-color:        #42ABE3;
-  --md-primary-fg-color--light: #118ccf;
+  --md-primary-fg-color:        #343A40;
+  --md-primary-fg-color--light: #707070;
   --md-primary-fg-color--dark:  #90030C;
+
+  /* Hover link colour */
+  --md-accent-fg-color: #42ABE3;
+}
+
+/* Default link colour */
+.md-typeset a {
+  color: #4288e3;
 }
