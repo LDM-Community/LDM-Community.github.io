@@ -757,13 +757,24 @@
 <h3 id="visual-studio-code">Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permanent link">&para;</a></h3>
 <p>You can install <a href="https://code.visualstudio.com/">install Visual Studio Code</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">Omnisharp extension</a> for developing plugins. Visual Studio Code is much lightweighter and faster then a full Visual Studio installation. It is optimal for small-mid size projects.</p>
 <h3 id="visual-studio">Visual Studio<a class="headerlink" href="#visual-studio" title="Permanent link">&para;</a></h3>
-<p>If you want a full IDE experience, download and install <a href="https://visualstudio.microsoft.com/vs/community/">Visual Studio Community Edition</a>. When the installer starts, select "Visual Studio 2019 Community Edition" (or newer). After that select the .NET Desktop Development option and press install/modify.</p>
+<p>If you want a full IDE experience, download and install <a href="https://visualstudio.microsoft.com/vs/community/">Visual Studio Community Edition</a>. When the installer starts, select "Visual Studio 2022 Community Edition" (or newer). After that select the .NET Desktop Development option and press install/modify.</p>
 <p><img alt="Selecting .NET desktop development option" src="https://docs.microsoft.com/en-us/visualstudio/install/media/vs2017-modify-workloads.png?view=vs-2017g" /></p>
 <h2 id="making-a-plugin-from-scratch">Making a plugin from scratch<a class="headerlink" href="#making-a-plugin-from-scratch" title="Permanent link">&para;</a></h2>
 <p>First create new "Class Library (.NET Framework)" in Visual Studio. Remember to select Framework to <code>.NET Framework 4.6.1</code></p>
 <p><img src="https://i.imgur.com/6xpxrLt.png" style="max-width: 80%;" /></p>
-<p>Now You have to add RocketMod and Unturned dependencies to your project. You can download latest Rocket.Unturned binaries <a href="https://github.com/RocketMod/Rocket.Unturned/releases">here</a> and latest Unturned binaries <code>Assembly-CSharp.dll</code> and <code>Assembly-CSharp-firstpass.dll</code> you should find them in <code>Unturned/Unturned_Data/Managed</code> directory of your Unturned files. You'll also need <code>UnityEngine.dll</code> and <code>UnityEngine.CoreModule.dll</code> which are both located in the same directory as Unturned binaries.  </p>
-<p>You should create and save all these libraries in your projects directory. Create a folder called <code>libraries</code> or <code>lib</code> for them.</p>
+<p>The next step is to add Unturned and Rocket's binaries to your project.</p>
+<p>You should make a new directory inside your project folder called <code>Libraries</code> or <code>libs</code>, and copy the following files over from the <code>Unturned\Unturned_Data\Managed\</code> directory:</p>
+<ul>
+<li>Assembly-Csharp.dll</li>
+<li>SDG.NetTransport.dll</li>
+<li>com.rlabrecque.steamworks.net.dll</li>
+</ul>
+<p>aswell as the Rocket binaries from <code>Unturned\Extras\Rocket.Unturned\</code>:</p>
+<ul>
+<li>Rocket.Core.dll</li>
+<li>Rocket.API.dll</li>
+<li>Rocket.Unturned.dll</li>
+</ul>
 <p>Now in Visual Studio's solution explorer right click on <strong>References</strong> and press <strong>Add Reference</strong>. Then browse for RocketMod and Unturned libraries that you saved in your projects directory, select and add them.</p>
 <p>After that rename the pre-existing Class1.cs file to ExamplePlugin.cs from the solution explorer. On the top of the file add <code>using Rocket.Core.Plugins</code>.</p>
 <p>We're now gonna start by making ExamplePlugin inherit from <code>RocketPlugin</code>, so your <code>ExamplePlugin.cs</code> should look like this now.</p>
